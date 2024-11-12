@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conveyor Belt</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/HomePage">Home Page</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/ConveyorBelt">Conveyor Belt</a>
+        </li>
+      </ul>
+    </nav>
+
+<h1>Conveyor Belt</h1>
+<p>This is the page where the user can control the Conveyor Belt, so we will update this page with the status of the print as well as a button that will run the conveyor belt. It will indicate when the finished print has been moved out of the way.<p>
+<br>
+
+<form>
+    <button id="conveyor-button" type="button">Run Conveyor Belt</button>
+</form>
+
+<!-- Area to display the text --> 
+<div id="displayArea"></div> 
+
+<script> 
+//JavaScript to handle the button click
+    document.getElementById('conveyor-button').addEventListener('click', function() { 
+        document.getElementById('displayArea').innerText = 'Button is working!'; 
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+</body>
+</html>
