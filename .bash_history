@@ -675,3 +675,108 @@ sudo nano OctoPrint.html
 cd ..
 export FLASK_APP=app.py
 flask run --host=0.0.0.0
+pip install numpy
+pip install matplotlib
+sudo apt-get install python3-opencv
+ls
+cd FinalProject
+mkdir OpenCV
+cd OpenCV
+nano firsttestopencv
+python 3 firsttestopencv
+python3 firsttestopencv
+nano firsttestopencv
+nano firsttestfeaturematching
+ls
+nano firsttestfeaturematching
+python3 firsttestfeaturematching
+ls
+nano firsttestfeaturematching
+python3 firsttestfeaturematching
+nano firsttestfeaturematching
+python3 firsttestfeaturematching
+nano firsttestfeaturematching
+python3 firsttestfeaturematching
+ls
+nano firsttestfeaturematching
+python3 firsttestfeaturematching
+nano firsttestfeaturematching
+nano secondtestfeaturematching
+python3 secondtestfeaturematching
+ls
+git commit -m "worked on using opencv to recognize similarities in pictures"
+git add --all
+git commit -m "worked on using opencv to recognize similarities in pictures"
+git push origin main
+ls
+nano firsttestedgedetection
+python3 firsttestedgedetection
+nano firsttestedgedetection
+python3 firsttestedgedetection
+nano firsttestedgedetection
+ls
+nano firsttestedgedetection
+python3 firsttestedgedetection
+nano firsttestedgedetection
+python3 firsttestedgedetection
+git add --all
+git commit -m "worked on using opencv to recognize edges in pictures"
+git push origin main
+nano firsttestedgedetection
+python3 firsttestedgedetection
+git add --all
+git commit -m "worked on using opencv to recognize edges in pictures"
+git push origin main
+rm 'mf edge success.png'
+l
+ls
+nano firsttestedgedetection
+python3 firsttestedgedetection
+ls
+nano firsttestfeaturematching
+python3 firsttestfeaturematching
+sudo shutdown now
+ls
+cd FinalProject
+cd Website
+ls
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+sudo shutdown now
+libcamera-hello
+vcgencmd get_camera
+sudo shutdown now
+libcamera-hello
+vcgencmd get_camera
+raspi-congif
+raspi-congig
+raspi-config
+sudo raspi-config
+vcgencmd get_camera
+sudo reboot now
+vcgencmd get_camera
+libcamera-hello
+vcgencmd get_camera
+libcamera-still -o firstpic.jpg
+sudo raspi-config
+vcgencmd get_camera
+sudo raspi-config
+vcgencmd get_camera
+sudo shutdown now
+vcgencmd get_camera
+libcamera-still -o firstpic.jpg
+libcamera-still ~firstpic.jpg
+vcgencmd get_camera
+libcamera-still -o ~/pictureattempt.jpg
+sudo raspi-config
+vcgencmd get_camera
+raspi-still
+raspistill
+rpicam-still
+rpicam-still -o ~/image.jpg
+vcgencmd get_camera
+libcamera-still
+libcamera
+libcamera-hello
+libcamera-apps
+sudo raspi-config
