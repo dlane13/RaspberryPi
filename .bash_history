@@ -473,3 +473,205 @@ rm helloworld
 make helloworld
 ./helloworld
 sudo shutdown now
+nano README.md
+git init
+git config --global user.name dlane13
+git config --global user.email "darby.lane@uvm.edu"
+git conig --global core.editor nano
+git config --global core.editor nano
+git add --all
+git commit -m "initial commit"
+git remote add origin https://github.com/dlane13/RaspberryPi.git
+git push origin master
+git push -u origin main
+git branch -M main
+git remote add origin https://github.com/dlane13/RaspberryPi.git
+git push -u origin main
+ls -al ~/.ssh
+sudo shutdown now
+ssh-keygen -t ed25519 -C "darby.lane@uvm.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
+git push -u origin main
+echo "# RaspberryPi" >> README.md
+git init
+git add README.md
+git commit -m "second commit"
+git branch -M main
+git remote add origin https://github.com/dlane13/RaspberryPi.git
+git push -u origin main
+sudo shutdown now
+ls
+lscpu
+ls
+cd FinalProject
+ls
+mkdir Website
+cd Website
+mkdir templates
+cd templates
+sudo nano HomePage.html
+cd .
+cd ..
+mkdir static
+cd static
+sudo nano script.js
+sudo shutdown now
+ls
+cd FinalProject
+ls
+cd Website
+ls
+cd templates
+ls
+sudo nano HomePage.html
+cd ..
+sudo nano app.py
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+cd templates
+sudo nano HomePage.html
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+cd ..
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+cd templates
+sudo nano HomePage.html
+cd ..
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+cd templates
+sudo nano ConveyorBelt.html
+cd ../static
+sudo nano runconveyorbelt.js
+cd ../templates
+ls
+sudo nano ConveyorBelt.html
+cd ..
+sudo nano app.py
+cd templates
+sudo nano ConveyorBelt.html
+cd ..
+cd static
+ls
+cd ..
+cd templates
+sudo nano ConveyorBelt.html
+cd ../static
+sudo nano runconveyorbelt.html
+sudo nano runconveyorbelt.js
+cd ..
+sudo nano app.py
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+ls
+cd templates
+ls
+sudo nano HomePage.html
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+cd ..
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+sudo nano app.py
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+cd templates
+sudo nano ConveyorBelt.html
+cd ..
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+cd static
+sudo nano runconveyorbelt.js
+cd ..
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+sudo nano app.py
+cd static
+sudo nano runconveyorbelt.js
+cd ..
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+sudo nano app.py
+cd static
+sudo nano runconveyorbelt.js
+cd ..
+sudo nano app.py
+cd templates
+cd ..
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+cd templates
+ls
+cd ..
+ls
+cd static
+ls
+cd ../templates
+sudo nano HomePage.html
+cd ..
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+cd static
+sudo nano runconveyorbelt.js
+cd ../templates
+sudo nano ConveyorBelt.html
+cd ..
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+cd templates
+sudo nano ConveyorBelt.html
+cd ..
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+git add .
+git commit -m "changes to html and javascript files to get website running, button is not working the way i want yet"
+git push origin main
+sudo shutdown now
+cd FinalProject/Website
+git pull origin master
+git pull origin main
+ls
+sudo nano app.py
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+sudo nano app.py
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+cd templates
+sudo nano ConveyorBelt.html
+cd ..
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+cd templates
+ls
+sudo nano ConveyorBelt.html
+cd ..
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+cd templates
+sudo nano ConveyorBelt.html
+cd ..
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+cd templates
+sudo nano ConveyorBelt.html
+cd ..
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+cd templates
+sudo nano ConveyorBelt.html
+cd ..
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
+cd templates
+ls
+sudo nano ConveyorBelt.html
+sudo nano HomePage.html
+sudo nano FailureDetection.html
+sudo nano OctoPrint.html
+cd ..
+export FLASK_APP=app.py
+flask run --host=0.0.0.0
