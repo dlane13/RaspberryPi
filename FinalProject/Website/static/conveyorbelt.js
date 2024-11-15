@@ -1,4 +1,4 @@
-var button = $("#conveyor_button");
+var button = $("#conveyor_run");
 button.click(function() {
     $.ajax({
         url: "/conveyor_on",

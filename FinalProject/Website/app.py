@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request
-import json
+from flask import Flask, render_template
 import time
+import board
+from adafruit_motorkit import MotorKit
 
 app = Flask(__name__)
 
@@ -17,14 +18,12 @@ def HomePage():
 def ConveyorBelt():
     return render_template("ConveyorBelt.html")
 
-@app.route('/click-button', methods=["GET"])
+@app.route('/conveyor_on', methods=["POST"])
 def click_button():
-    return json.dumps(print_conveyor_status())
-
-def print_conveyor_status():
-    print("Running the conveyor belt now!")
-    time.sleep(5)
-    return "Conveyor belt has finished running! The printer is ready for your next project."
+    kit = MotorKit(i2c=board.I2C())
+    kit.motor1.throttle = 0.1
+    time.sleep(3)
+    kit.motor1.throttle = 0
 
 @app.route('/OctoPrint', methods=["GET"])
 def OctoPrint():
