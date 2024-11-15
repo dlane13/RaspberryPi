@@ -31,20 +31,10 @@
     <p>This is the page where the user can control the Conveyor Belt, so we will update this page with the status of the print as well as a button that will run the conveyor belt. It will indicate when the finished print has been moved out of the way.<p>
     <br>
 </div>
-<button onclick="displayText()">Run Conveyor Belt</button>
+<button id="conveyor_run">Run Conveyor Belt</button>
 
-
-<div id="textField" style="display: none;">
-    The conveyor belt is running. It should be done in about five seconds, and you may start your next print!
-</div>
-
-<script>
-function displayText() {
-    var text = document.getElementById("textField");
-    text.style.display = "block";
-}
-</script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/static/conveyorbutton.js"></script>
 
 </body>
 </html>
