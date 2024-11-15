@@ -21,7 +21,7 @@ def ConveyorBelt():
 @app.route('/conveyor_on', methods=["POST"])
 def click_button():
     kit = MotorKit(i2c=board.I2C())
-    kit.motor1.throttle = 0.1
+    kit.motor1.throttle = 0.5
     time.sleep(3)
     kit.motor1.throttle = 0
 

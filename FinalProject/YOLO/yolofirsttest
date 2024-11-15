@@ -1,0 +1,10 @@
+from ultralytics import YOLO
+
+# Load a pretrained YOLO model
+model = YOLO('yolov8n.pt') 
+
+# Run inference on an image
+results = model('image.jpg')
+
+# Print the results
+print(results) 
