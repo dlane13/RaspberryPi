@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 import time
 import board
 from adafruit_motorkit import MotorKit
@@ -21,9 +21,10 @@ def ConveyorBelt():
 @app.route('/conveyor_on', methods=["POST"])
 def click_button():
     kit = MotorKit(i2c=board.I2C())
-    kit.motor1.throttle = 0.5
-    time.sleep(3)
+    kit.motor1.throttle = 1
+    time.sleep(2)
     kit.motor1.throttle = 0
+    return "Conveyor activated" 
 
 @app.route('/OctoPrint', methods=["GET"])
 def OctoPrint():
