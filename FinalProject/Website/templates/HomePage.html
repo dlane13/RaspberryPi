@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home Page</title>
 
-    <!-- Include Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+
+  <!-- Include Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
 </head>
+
+<!-- working on CSS, subject to change -CL -->
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-nav .nav-link {
+    color: darkslategray;
+  }
+
+  .jumbotron-main {
+    margin-bottom: 0;
+    background-color: blanchedalmond;
+    text-align: center;
+  }
+
+  .jumbotron-main header {
+    color: rgb(67, 5, 58);
+    font-weight: bold;
+  }
+
+  .jumbotron-main h1 {
+    color: rgb(126, 0, 63);
+  }
+
+  .jumbotron-main h3 {
+    color: darkmagenta;
+  }
+
+  .jumbotron-main p {
+    color: rgb(67, 5, 58);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .jumbotron-footer {
+    margin-bottom: 0;
+    background-color: blanchedalmond;
+    text-align: left;
+    padding: 1rem 2rem;
+  }
+</style>
+
+
 <body>
 
     <!-- Bootstrap navigation bar -->
@@ -29,15 +76,15 @@
     </nav>
     
     <!-- Bootstrap jumbotron for title. {{name}} from Flask app -->
-    <div class="jumbotron text-center" style="margin-bottom:0; background-color:rgb(255, 217, 255);">
-      <header style="color: rgb(214, 12, 184); font-style: bold;">About The Project</header>
-      <h1 style="color:rgb(126, 0, 63)">Using Raspberry Pi to omptimize 3d Printing</h1>
-      <h3 style="color:darkmagenta">Team CD : Darby Lane and Callie Levitt</h3>
-      <p>3D printers have revolutionized the maker movement throughout the world, and this project will revolutionize the accessibility of printers to makers who need remote access in order to efficiently produce projects. Through the use of a Raspberry Pi, our team has worked to create a remote monitoring system for 3d printing enthusiasts to keep track of their projects, as well as prototyping a conveyor belt, which if implemented within the printer, would allow for a continuous flow of 3d prints without ever needing to set foot in the lab.</p>
+    <div>
+      <header>About The Project</header>
+      <h1>Using Raspberry Pi to omptimize 3d Printing</h1>
+      <h3>Team CD : Darby Lane and Callie Levitt</h3>
+      <p>3D printers have revolutionized the maker movement throughout the world, and this project will revolutionize the accessibility of printers to makers who need remote access in order to efficiently produce projects. Through the use of a Raspberry Pi, our team has worked to create a remote monitoring system for 3d printing enthusiasts to keep track of their projects, as well as prototyping a conveyor belt, which if implemented within the printer, would allow for a continuous flow of 3d prints without ever needing to set foot in the lab.</p> <!-- Updated paragraph -CL -->
     </div>
 
     <!-- Footer (styled with Bootstrap). {{name}} from Flask app -->
-    <div class="jumbotron text-left" style="margin-bottom:0">
+    <div>
       <p>&copy; {{name}} [CS 121]</p>
     </div>
 
