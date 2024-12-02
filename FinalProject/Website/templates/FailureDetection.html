@@ -1,111 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Failure Detection</title>
-  
-    <!-- Updated Bootstrap to v5.3 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  
-    <!-- Custom CSS -->
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-  
-      .navbar-nav .nav-link {
-        color: darkslategray;
-      }
-  
-      .jumbotron-main {
-        margin-bottom: 0;
-        background-color: rgb(205, 255, 243);
-        text-align: center;
-        padding: 2rem;
-      }
-  
-      .jumbotron-main h1 {
-        color: rgb(120, 20, 70);
-        font-weight: bold;
-      }
-  
-      .jumbotron-main h3,
-      .jumbotron-main p {
-        color: rgb(168, 71, 154);
-      }
-  
-      .jumbotron-footer {
-        background-color: rgb(137, 159, 238);
-        text-align: left;
-        padding: 1rem 2rem;
-      }
-  
-      .embed-responsive-item {
-        border: none;
-      }
-  
-      .custom-button {
-          background-color: darkmagenta;
-          text-decoration: rgb(255, 233, 224);
-          padding: 10px 20px;
-          border: thin lightseagreen;
-          border-radius: 5px;
-          font-size: 16px;
-          cursor: pointer;
-          box-shadow: darkslategray;
-          box-shadow: 1px, 1px;
-          transition: background-color 0.3s ease;
-        }
-    
-        .custom-button:hover {
-          background-color: rgb(126, 0, 63);
-          border: thin rgb(17, 97, 93);
-        }
-    </style>
-  </head>
-  
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Failure Detection</title>
+
+  <!-- Updated Bootstrap to v5.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar-nav .nav-link {
+      color: darkslategray;
+    }
+
+    .jumbotron-main {
+      margin-bottom: 0;
+      background-color: rgb(205, 255, 243);
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .jumbotron-main h1 {
+      color: rgb(120, 20, 70);
+      font-weight: bold;
+    }
+
+    .jumbotron-main p {
+      color: rgb(168, 71, 154);
+    }
+
+    .jumbotron-footer {
+      background-color: rgb(137, 159, 238);
+      text-align: left;
+      padding: 1rem 2rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      display: block;
+      border: 2px solid darkcyan;
+      border-radius: 2px;
+    }
+
+    .image-caption {
+      font-size: 1rem;
+      color: darkslategray;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .custom-button {
+      background-color: darkmagenta;
+      color: rgb(255, 233, 224);
+      padding: 10px 20px;
+      border: 2px solid lightseagreen;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .custom-button:hover {
+      background-color: rgb(126, 0, 63);
+      border-color: rgb(17, 97, 93);
+    }
+  </style>
+</head>
 
 <body>
 
-    <!-- Bootstrap navigation bar -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/HomePage">Home Page</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/ConveyorBelt">Conveyor Belt</a>
-        </li>
-        <li class="nav item">
-          <a class="nav-link" href="/OctoPrint">OctoPrint Manager</a>
-        </li>
-        <li class="nav item">
-          <a class="nav-link" href="/FailureDetection">Failure Detection</a>
-        </li>
-      </ul>
-    </nav>
-    
-    <!-- Bootstrap jumbotron for title. {{name}} from Flask app -->
-    <div class="jumbotron text-center" style="margin-bottom:0; background-color:rgb(255, 217, 255);">
-      <h1>This is where we will put the livestream photo of the print as it updates, should update every five minutes</h1>
-      <p>Every time a photo is taken, an AI model (openCV, YOLO) will be run on it to detect if the print has failed. If so, a message will be sent to the user alerting them that the print has failed.</p>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/HomePage">Home Page</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ConveyorBelt">Conveyor Belt</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/OctoPrint">OctoPrint Manager</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/FailureDetection">Failure Detection</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Jumbotron Section -->
+  <div class="jumbotron jumbotron-main">
+    <h1>Failure Detection</h1>
+    <p>This page monitors 3D print status with an AI model that detects failures based on livestream images, updating every five minutes. Alerts notify users of any detected print issues.</p>
+  </div>
+
+  <!-- Image Section -->
+  <div class="container text-center">
+    <div>
+      <img src="print1.jpg" alt="Print in progress">
+      <p class="image-caption">Successful Print in Progress</p>
     </div>
-
-    <img style="border: darkcyan; border-radius: 2px;" src="print1.jpg" alt="Print in progress">
-    <caption style="text-decoration: darkslategray; border: darkmagenta; border-radius: 1px;">Successful Print in Progress</caption>
-    <img style="border: darkcyan; border-radius: 2px;"src="print2.jpg" alt="Print failing">
-    <caption style="text-decoration: darkslategray; border: darkmagenta; border-radius: 1px;">Print Failing, Adhesion Issues</caption> 
-
-    <div><img src="static/image.jpg"></div>
-
-    <!-- Footer (styled with Bootstrap). {{name}} from Flask app -->
-    <div class="jumbotron text-left" style="margin-bottom:0">
-      <p>&copy; {{name}} [CS 121]</p>
+    <div>
+      <img src="print2.jpg" alt="Print failing">
+      <p class="image-caption">Print Failing: Adhesion Issues</p>
     </div>
+    <div>
+      <img src="static/image.jpg" alt="Livestream image">
+      <p class="image-caption">Current Livestream Snapshot</p>
+    </div>
+  </div>
 
+  <!-- Footer -->
+  <div class="jumbotron jumbotron-footer">
+    <p>&copy; {{name}} [CS 121]</p>
+  </div>
 
 </body>
+
 </html>

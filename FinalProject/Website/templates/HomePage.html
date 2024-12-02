@@ -44,45 +44,55 @@
       padding: 1rem 2rem;
     }
 
-    .embed-responsive-item {
-      border: none;
+    header {
+      font-size: 24px;
+      font-weight: bold;
+      color: rgb(120, 20, 70);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      line-height: 1.6;
+      text-align: justify;
+      color: rgb(67, 5, 58);
     }
   </style>
 </head>
 
 <body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/HomePage">About the Project</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ConveyorBelt">Conveyor Belt</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/OctoPrint">Print Manager</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/FailureDetection">Failure Detection</a>
+      </li>
+    </ul>
+  </nav>
 
-    <!-- Bootstrap navigation bar -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/HomePage">About the Project</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/ConveyorBelt">Conveyor Belt</a>
-        </li>
-        <li class="nav item">
-          <a class="nav-link" href="/OctoPrint">Print Manager</a>
-        </li>
-        <li class="nav item">
-          <a class="nav-link" href="/FailureDetection">Failure Detection</a>
-        </li>
-      </ul>
-    </nav>
-    
-    <!-- Bootstrap jumbotron for title. {{name}} from Flask app -->
-    <div>
-      <header>About The Project</header>
-      <h1>Using Raspberry Pi to optimize 3d Printing</h1>
-      <h3>Team CD : Darby Lane and Callie Levitt</h3>
-      <p>3D printers have revolutionized the maker movement throughout the world, and this project will revolutionize the accessibility of printers to makers who need remote access in order to efficiently produce projects. Through the use of a Raspberry Pi, our team has worked to create a remote monitoring system for 3d printing enthusiasts to keep track of their projects, as well as prototyping a conveyor belt, which if implemented within the printer, would allow for a continuous flow of 3d prints without ever needing to set foot in the lab.</p> <!-- Updated paragraph -CL -->
-    </div>
+  <!-- Jumbotron Section -->
+  <div class="jumbotron jumbotron-main">
+    <header>About The Project</header>
+    <h1>Using Raspberry Pi to Optimize 3D Printing</h1>
+    <h3>Team CD: Darby Lane and Callie Levitt</h3>
+    <p>
+      3D printers have revolutionized the maker movement throughout the world, and this project aims to enhance the accessibility of printers for makers who need remote access to efficiently produce projects. Using a Raspberry Pi, our team has developed a remote monitoring system for 3D printing enthusiasts to track their projects and prototype a conveyor belt. If implemented, this system allows for continuous 3D printing workflows without the need for physical presence in the lab.
+    </p>
+  </div>
 
-    <!-- Footer (styled with Bootstrap). {{name}} from Flask app -->
-    <div>
-      <p>&copy; {{name}} [CS 121]</p>
-    </div>
-
-<!--editing the file-->
+  <!-- Footer -->
+  <div class="jumbotron jumbotron-footer">
+    <p>&copy; {{name}} [CS 121]</p>
+  </div>
 </body>
+
 </html>

@@ -33,7 +33,6 @@
       font-weight: bold;
     }
 
-    .jumbotron-main h3,
     .jumbotron-main p {
       color: rgb(168, 71, 154);
     }
@@ -44,69 +43,68 @@
       padding: 1rem 2rem;
     }
 
+    .custom-button {
+      background-color: darkmagenta;
+      color: white;
+      padding: 10px 20px;
+      border: 2px solid lightseagreen;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .custom-button:hover {
+      background-color: rgb(126, 0, 63);
+      border-color: rgb(17, 97, 93);
+    }
+
     .embed-responsive-item {
       border: none;
     }
-
-    .custom-button {
-        background-color: darkmagenta;
-        text-decoration: rgb(255, 233, 224);
-        padding: 10px 20px;
-        border: thin lightseagreen;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        box-shadow: darkslategray;
-        box-shadow: 1px, 1px;
-        transition: background-color 0.3s ease;
-      }
-  
-      .custom-button:hover {
-        background-color: rgb(126, 0, 63);
-        border: thin rgb(17, 97, 93);
-      }
   </style>
 </head>
 
-<!-- working on CSS, subject to change -CL -->
-
-
-
 <body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/HomePage">Home Page</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ConveyorBelt">Conveyor Belt</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/OctoPrint">OctoPrint Manager</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/FailureDetection">Failure Detection</a>
+      </li>
+    </ul>
+  </nav>
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/HomePage">Home Page</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/ConveyorBelt">Conveyor Belt</a>
-        </li>
-        <li class="nav item">
-          <a class="nav-link" href="/OctoPrint">OctoPrint Manager</a>
-        </li>
-        <li class="nav item">
-          <a class="nav-link" href="/FailureDetection">Failure Detection</a>
-        </li>
-      </ul>
-    </nav>
-
-<div class="jumbotron text-center">
-
+  <!-- Jumbotron Section -->
+  <div class="jumbotron jumbotron-main">
     <h1>Remote Conveyor Belt Operation</h1>
-    <p>This conveyor belt prototype models the idea of a conveyor belt mounted on the build plate of the 3d printer. As soon as a build is complete, it will be moved off of the plate so that the next project in the queue can begin immediately. The button seen on this page allows you to control this conveyor belt from anywhere, with ease.
-      <p><!-- changed P content -CL -->
-    <br>
-</div>
-<button id="conveyor_run">Run Conveyor Belt</button>
+    <p>
+      This conveyor belt prototype demonstrates a system that automatically removes completed prints from the 3D printer's build plate, allowing the next print in the queue to begin immediately. Use the button below to control the conveyor belt remotely.
+    </p>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="/static/conveyorbelt.js"></script>
+  <!-- Button Section -->
+  <div class="text-center my-4">
+    <button id="conveyor_run" class="custom-button">Run Conveyor Belt</button>
+  </div>
 
-    <!-- Footer (styled with Bootstrap). {{name}} from Flask app -->
-    <div class="jumbotron text-left" style="margin-bottom:0">
-      <p>&copy; {{name}} [CS 121]</p>
-    </div>
+  <!-- Include JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="/static/conveyorbelt.js"></script>
 
+  <!-- Footer -->
+  <div class="jumbotron jumbotron-footer">
+    <p>&copy; {{name}} [CS 121]</p>
+  </div>
 </body>
+
 </html>
