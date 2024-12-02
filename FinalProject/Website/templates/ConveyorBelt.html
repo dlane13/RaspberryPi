@@ -10,66 +10,7 @@
 </head>
 
 <!-- working on CSS, subject to change -CL -->
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
 
-  .navbar-nav .nav-link {
-    color: darkslategray;
-  }
-
-  .jumbotron-main {
-    margin-bottom: 0;
-    background-color: blanchedalmond;
-    text-align: center;
-  }
-
-  .jumbotron-main header {
-    color: rgb(67, 5, 58);
-    font-weight: bold;
-  }
-
-  .jumbotron-main h1 {
-    color: rgb(126, 0, 63);
-  }
-
-  .jumbotron-main h3 {
-    color: darkmagenta;
-  }
-
-  .jumbotron-main p {
-    color: rgb(67, 5, 58);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-
-  .jumbotron-footer {
-    margin-bottom: 0;
-    background-color: blanchedalmond;
-    text-align: left;
-    padding: 1rem 2rem;
-  }
-
-  .custom-button {
-      background-color: darkmagenta;
-      text-decoration: rgb(255, 233, 224);
-      padding: 10px 20px;
-      border: thin lightseagreen;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      box-shadow: darkslategray;
-      box-shadow: 1px, 1px;
-      transition: background-color 0.3s ease;
-    }
-
-    .custom-button:hover {
-      background-color: rgb(126, 0, 63);
-      border: thin rgb(17, 97, 93);
-    }
-</style>
 
 
 <body>
@@ -91,7 +32,69 @@
       </ul>
     </nav>
 
-<div class="jumbotron text-center" style="margin-bottom:0; background-color:rgb(255, 217, 255);">
+<div class="jumbotron text-center">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .navbar-nav .nav-link {
+      color: darkslategray;
+    }
+  
+    .jumbotron-main {
+      margin-bottom: 0;
+      background-color: blanchedalmond;
+      text-align: center;
+    }
+  
+    .jumbotron-main header {
+      color: rgb(67, 5, 58);
+      font-weight: bold;
+    }
+  
+    .jumbotron-main h1 {
+      color: rgb(126, 0, 63);
+    }
+  
+    .jumbotron-main h3 {
+      color: darkmagenta;
+    }
+  
+    .jumbotron-main p {
+      color: rgb(67, 5, 58);
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  
+    .jumbotron-footer {
+      margin-bottom: 0;
+      background-color: blanchedalmond;
+      text-align: left;
+      padding: 1rem 2rem;
+    }
+  
+    .custom-button {
+        background-color: darkmagenta;
+        text-decoration: rgb(255, 233, 224);
+        padding: 10px 20px;
+        border: thin lightseagreen;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: darkslategray;
+        box-shadow: 1px, 1px;
+        transition: background-color 0.3s ease;
+      }
+  
+      .custom-button:hover {
+        background-color: rgb(126, 0, 63);
+        border: thin rgb(17, 97, 93);
+      }
+  </style>
+
     <h1>Remote Conveyor Belt Operation</h1>
     <p>This conveyor belt prototype models the idea of a conveyor belt mounted on the build plate of the 3d printer. As soon as a build is complete, it will be moved off of the plate so that the next project in the queue can begin immediately. The button seen on this page allows you to control this conveyor belt from anywhere, with ease.
       <p><!-- changed P content -CL -->
