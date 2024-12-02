@@ -2,6 +2,8 @@ from flask import Flask, render_template, jsonify
 import time
 import board
 from adafruit_motorkit import MotorKit
+import multiprocessing
+import take_photos
 
 app = Flask(__name__)
 
@@ -33,3 +35,10 @@ def OctoPrint():
 @app.route('/FailureDetection', methods=["GET"])
 def FailureDetection():
     return render_template("FailureDetection.html")
+
+def take_photos_forever():
+    while True:
+        take_photos.take_photo()
+
+multiprocessing.Process(target=take_photos_forever).start()
+
