@@ -3,10 +3,69 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Conveyor Belt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conveyor Belt Operation</title>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <!-- Updated Bootstrap to v5.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar-nav .nav-link {
+      color: darkslategray;
+    }
+
+    .jumbotron-main {
+      margin-bottom: 0;
+      background-color: rgb(205, 255, 243);
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .jumbotron-main h1 {
+      color: rgb(120, 20, 70);
+      font-weight: bold;
+    }
+
+    .jumbotron-main h3,
+    .jumbotron-main p {
+      color: rgb(168, 71, 154);
+    }
+
+    .jumbotron-footer {
+      background-color: rgb(137, 159, 238);
+      text-align: left;
+      padding: 1rem 2rem;
+    }
+
+    .embed-responsive-item {
+      border: none;
+    }
+
+    .custom-button {
+        background-color: darkmagenta;
+        text-decoration: rgb(255, 233, 224);
+        padding: 10px 20px;
+        border: thin lightseagreen;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: darkslategray;
+        box-shadow: 1px, 1px;
+        transition: background-color 0.3s ease;
+      }
+  
+      .custom-button:hover {
+        background-color: rgb(126, 0, 63);
+        border: thin rgb(17, 97, 93);
+      }
+  </style>
 </head>
 
 <!-- working on CSS, subject to change -CL -->
@@ -33,67 +92,6 @@
     </nav>
 
 <div class="jumbotron text-center">
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-  
-    .navbar-nav .nav-link {
-      color: darkslategray;
-    }
-  
-    .jumbotron-main {
-      margin-bottom: 0;
-      background-color: blanchedalmond;
-      text-align: center;
-    }
-  
-    .jumbotron-main header {
-      color: rgb(67, 5, 58);
-      font-weight: bold;
-    }
-  
-    .jumbotron-main h1 {
-      color: rgb(126, 0, 63);
-    }
-  
-    .jumbotron-main h3 {
-      color: darkmagenta;
-    }
-  
-    .jumbotron-main p {
-      color: rgb(67, 5, 58);
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
-  
-    .jumbotron-footer {
-      margin-bottom: 0;
-      background-color: blanchedalmond;
-      text-align: left;
-      padding: 1rem 2rem;
-    }
-  
-    .custom-button {
-        background-color: darkmagenta;
-        text-decoration: rgb(255, 233, 224);
-        padding: 10px 20px;
-        border: thin lightseagreen;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        box-shadow: darkslategray;
-        box-shadow: 1px, 1px;
-        transition: background-color 0.3s ease;
-      }
-  
-      .custom-button:hover {
-        background-color: rgb(126, 0, 63);
-        border: thin rgb(17, 97, 93);
-      }
-  </style>
 
     <h1>Remote Conveyor Belt Operation</h1>
     <p>This conveyor belt prototype models the idea of a conveyor belt mounted on the build plate of the 3d printer. As soon as a build is complete, it will be moved off of the plate so that the next project in the queue can begin immediately. The button seen on this page allows you to control this conveyor belt from anywhere, with ease.
