@@ -53,24 +53,25 @@
     }
 
     .circular-button {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      background-color: rgb(217, 67, 142);
-      color: white;
-      font-size: 1.5rem;
-      border: 10px lightseagreen;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      transition: transform 0.2s ease;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: rgb(217, 67, 142);
+        color: white;
+        font-size: 1.5rem;
+        border: 5px solid lightseagreen; 
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .circular-button:hover {
-      transform: scale(1.1.2);
-      background-color: rgb(124, 5, 106);
-      border: 12px rgb(50, 255, 245);
+        transform: scale(1.12);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); 
+        background-color: rgb(124, 5, 106);
     }
   </style>
 </head>
@@ -103,9 +104,9 @@
     </p>
   </div>
 
-  <!-- Centered Circular Button -->
+  <!-- octoprint link button -->
   <div class="centered-button">
-    <a href="https:10.245.195.173/" class="circular-button">Click Here to Access our OctoPrint Server</a>
+    <a href="http://10.245.195.173/" class="circular-button">Click Here to Access our OctoPrint Server</a>
   </div>
 
   <!-- Footer -->
