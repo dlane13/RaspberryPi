@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Embedded 3D Print Monitoring</title>
+  <title>Home Page</title>
 
   <!-- Updated Bootstrap to v5.3 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -12,7 +12,7 @@
   <!-- Custom CSS -->
   <style>
     body {
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: rgb(205, 255, 243);
@@ -27,19 +27,16 @@
       background-color: rgb(205, 255, 243);
       text-align: center;
       padding: 2rem;
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
     .jumbotron-main h1 {
       color: rgb(120, 20, 70);
       font-weight: bold;
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
     .jumbotron-main h3,
     .jumbotron-main p {
       color: rgb(168, 71, 154);
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
     .jumbotron-footer {
@@ -48,25 +45,48 @@
       padding: 1rem 2rem;
     }
 
-    .embed-responsive-item {
-      border: none;
+    .centered-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .circular-button {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background-color: rgb(217, 67, 142);
+      color: white;
+      font-size: 1.5rem;
+      border: 10px lightseagreen;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .circular-button:hover {
+      transform: scale(1.1.2);
+      background-color: rgb(124, 5, 106);
+      border: 12px rgb(50, 255, 245);
     }
   </style>
 </head>
 
 <body>
-
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="/HomePage">Home Page</a>
+        <a class="nav-link" href="/HomePage">About the Project</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/ConveyorBelt">Conveyor Belt</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/OctoPrint">OctoPrint Manager</a>
+        <a class="nav-link" href="/OctoPrint">Print Manager</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/FailureDetection">Failure Detection</a>
@@ -74,25 +94,24 @@
     </ul>
   </nav>
 
-  <!-- Main Jumbotron -->
+  <!-- Jumbotron Section -->
   <div class="jumbotron jumbotron-main">
-    <h1>Embedded 3D Print Monitoring</h1>
-    <h3>Manage OctoPrint via this interface</h3>
-    <p>Use the iframe below to interact with OctoPrint directly.</p>
+    <h1>Using Raspberry Pi to Optimize 3D Printing</h1>
+    <h3>Team CD: Darby Lane and Callie Levitt</h3>
+    <p>
+      3D printers have revolutionized the maker movement throughout the world, and this project aims to enhance the accessibility of printers for makers who need remote access to efficiently produce projects.
+    </p>
   </div>
 
-  <!-- Embed OctoPrint Interface -->
-  <div class="embed-responsive embed-responsive-16by9">
-    <button>
-    <iframe src="http://10.245.208.70/?#temp" class="embed-responsive-item" allowfullscreen></iframe>
-  </button>
+  <!-- Centered Circular Button -->
+  <div class="centered-button">
+    <a href="https:10.245.195.173/" class="circular-button">Click Here to Access our OctoPrint Server</a>
   </div>
 
   <!-- Footer -->
   <div class="jumbotron jumbotron-footer">
     <p>&copy; {{name}} [CS 121]</p>
   </div>
-
 </body>
 
 </html>
