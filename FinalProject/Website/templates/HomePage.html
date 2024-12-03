@@ -12,7 +12,7 @@
   <!-- Custom CSS -->
   <style>
     body {
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: rgb(205, 255, 243);
@@ -27,19 +27,16 @@
       background-color: rgb(205, 255, 243);
       text-align: center;
       padding: 2rem;
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
     .jumbotron-main h1 {
       color: rgb(120, 20, 70);
       font-weight: bold;
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
     .jumbotron-main h3,
     .jumbotron-main p {
       color: rgb(168, 71, 154);
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
     .jumbotron-footer {
@@ -48,18 +45,30 @@
       padding: 1rem 2rem;
     }
 
-    header {
-      font-size: 24px;
-      font-weight: bold;
-      color: rgb(120, 20, 70);
-      text-align: center;
-      margin-bottom: 1rem;
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 10px solid darkcyan;
+      border-radius: 8px;
     }
 
-    p {
-      line-height: 1.6;
-      text-align: justify;
-      color: rgb(67, 5, 58);
+    .image-caption {
+      font-size: 1rem;
+      color: darkslategray;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .sidebar {
+      background-color: rgb(137, 159, 238);
+      padding: 1rem;
+      color: white;
+      border-radius: 8px;
+    }
+
+    .sidebar img {
+      border-radius: 50%;
+      border: 5px solid white;
     }
   </style>
 </head>
@@ -83,14 +92,28 @@
     </ul>
   </nav>
 
-  <!-- Jumbotron Section -->
-  <div class="jumbotron jumbotron-main">
-    <header>About The Project</header>
-    <h1>Using Raspberry Pi to Optimize 3D Printing</h1>
-    <h3>Team CD: Darby Lane and Callie Levitt</h3>
-    <p>
-      3D printers have revolutionized the maker movement throughout the world, and this project aims to enhance the accessibility of printers for makers who need remote access to efficiently produce projects. Using a Raspberry Pi, our team has developed a remote monitoring system for 3D printing enthusiasts to track their projects and prototype a conveyor belt. If implemented, this system allows for continuous 3D printing workflows without the need for physical presence in the lab.
-    </p>
+  <!-- Main Content with Sidebar -->
+  <div class="container mt-4">
+    <div class="row">
+      <!-- Main Content -->
+      <div class="col-md-9">
+        <div class="jumbotron-main">
+          <header>About The Project</header>
+          <h1>Using Raspberry Pi to Optimize 3D Printing</h1>
+          <h3>Team CD: Darby Lane and Callie Levitt</h3>
+          <p>
+            3D printers have revolutionized the maker movement throughout the world, and this project aims to enhance the accessibility of printers for makers who need remote access to efficiently produce projects. Using a Raspberry Pi, our team has developed a remote monitoring system for 3D printing enthusiasts to track their projects and prototype a conveyor belt. If implemented, this system allows for continuous 3D printing workflows without the need for physical presence in the lab.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-md-3 sidebar text-center">
+        <h4>About Us</h4>
+        <img src="static/Photos/selfie.jpg" alt="Team Selfie" class="img-fluid" width="150">
+        <p class="image-caption">Team CD's first ever PiCam selfie!</p>
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->
