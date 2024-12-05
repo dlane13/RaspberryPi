@@ -110,7 +110,8 @@
 <!-- js hard refresh button -->
 <script>
   document.getElementById('hardRefresh').addEventListener('click', () => {
-    location.reload(true);
+    const currentUrl = window.location.href.split('?')[0]; 
+    window.location.href = `${currentUrl}?cacheBust=${new Date().getTime()}`;
   });
 </script>
   </div>
