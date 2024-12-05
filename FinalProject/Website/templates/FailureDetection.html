@@ -62,21 +62,6 @@
       margin-bottom: 20px;
     }
 
-    .refresh-button {
-    background-color: rgb(255, 146, 195);
-    color: white;
-    border: fuchsia 10px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-
-  .refresh-button:hover {
-    background-color: rgb(255, 116, 220);
-    border: 10px solid rgb(114, 0, 114) ;
-    transform: scale(1.2);
-  }
   </style>
 </head>
 
@@ -104,19 +89,9 @@
   <div class="jumbotron jumbotron-main">
     <h1>Failure Detection</h1>
     <p>Monitor your print here!</p>
-    <button id="hardRefresh" class="refresh-button">Press to Live Update Image!</button>
+    <p>Press ctrl + shift + r for a live photo update!</p>
 </div>
 
-<!-- js hard refresh button -->
- <div>
-  <script>
-    document.getElementById('hardRefresh').addEventListener('click', () => {
-      const img = document.querySelector('img[src="static/image.jpg"]'); // Select the live image
-      const currentSrc = img.src.split('?')[0]; // Remove any existing query parameters
-      img.src = `${currentSrc}?cacheBust=${new Date().getTime()}`; // Append cache-busting query
-    });
-  </script>
-  </div>
 
   <!-- Image Section -->
   <div class="container text-center">
