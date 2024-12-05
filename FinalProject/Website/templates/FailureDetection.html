@@ -74,7 +74,7 @@
 
   .refresh-button:hover {
     background-color: rgb(255, 116, 220);
-    border: rgb(114, 0, 114) 10px;
+    border: 10px solid rgb(114, 0, 114) ;
     transform: scale(1.2);
   }
   </style>
@@ -109,12 +109,13 @@
 
 <!-- js hard refresh button -->
  <div>
-<script>
-  document.getElementById('hardRefresh').addEventListener('click', () => {
-    const currentUrl = window.location.href.split('?')[0]; 
-    window.location.href = `${currentUrl}?cacheBust=${new Date().getTime()}`;
-  });
-</script>
+  <script>
+    document.getElementById('hardRefresh').addEventListener('click', () => {
+      const img = document.querySelector('img[src="static/image.jpg"]'); // Select the live image
+      const currentSrc = img.src.split('?')[0]; // Remove any existing query parameters
+      img.src = `${currentSrc}?cacheBust=${new Date().getTime()}`; // Append cache-busting query
+    });
+  </script>
   </div>
 
   <!-- Image Section -->
